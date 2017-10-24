@@ -1,4 +1,5 @@
 var path =require("path");
+var webpack=require("webpack");
 
 var DIST_DIR= path.resolve(__dirname, "dist");
 var SRC_DIR= path.resolve(__dirname, "src");
@@ -11,7 +12,13 @@ var config={
     publicPath: "/app/"
   },
 
-
+  devServer: {
+      hot: true
+    },
+  plugins: [
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin()
+    ],
   module: {
     loaders: [
       {
@@ -19,7 +26,8 @@ var config={
       include: SRC_DIR,
       loader: 'babel-loader',
       query: {
-        presets: ['babel-preset-env']
+        presets: ['babel-preset-env','react'],
+        plugins: ["react-hot-loader/babel"]
       }
     }
     ]
