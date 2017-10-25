@@ -1,10 +1,15 @@
 var React=require('react');
 var ReactDOM= require('react-dom');
 
+import {Header} from "./components/Header";
+import {Home} from "./components/Home";
 
 class App extends React.Component{
   render(){
-    return(<div><h1>hello!!!</h1></div>);
+    return(<div>
+      <Header/>
+      <Home/>
+      </div>);
     }
 }
 
