@@ -1,5 +1,8 @@
 var path =require("path");
 var webpack=require("webpack");
+//var ExtractTextPlugin= require('extract-text-webpack-plugin');
+
+
 
 var DIST_DIR= path.resolve(__dirname, "dist");
 var SRC_DIR= path.resolve(__dirname, "src");
@@ -32,6 +35,7 @@ var config={
     }
     ]
   }
+
 
 };
 

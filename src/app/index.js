@@ -1,5 +1,6 @@
 var React=require('react');
 var ReactDOM= require('react-dom');
+//import './main.scss';
 
 import {Header} from "./components/Header";
 import {Home} from "./components/Home";
@@ -9,6 +10,7 @@ class App extends React.Component{
     return(<div>
       <Header/>
       <Home/>
+      <p>wait now</p>
       </div>);
     }
 }

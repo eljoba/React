@@ -5,9 +5,9 @@ export class Header extends React.Component{
     return(
       <nav>
       <ul>
-      <li>Home</li>
-      <li>Login</li>
-      <li>Register</li>
+      <li><a className="active" href="#home">Home</a></li>
+      <li><a className="active" href="#login">Login</a></li>
+      <li><a className="active" href="#register">Register</a></li>
       </ul>
       </nav>
     );
