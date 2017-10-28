@@ -4,12 +4,15 @@ export class Header extends React.Component{
   constructor(){
     super();
     this.state={
-      color_h: true,
+      color_h: false,
       color_l: true,
       color_r: true
     }
 
   }
+
+
+
   tabColorh(){
     if(this.state.color_h==true){
     this.setState(
@@ -71,7 +74,7 @@ this.setState(
     return(
       <nav>
       <ul>
-      <li ><a style={{backgroundColor: bgColorh}} className="active" href="#home" onClick={()=>this.tabColorh()}>Home</a></li>
+      <li ><a style={{backgroundColor: bgColorh}}  className="active" href="#home" onClick={()=>this.tabColorh()}>Home</a></li>
       <li  ><a style={{backgroundColor: bgColorl}} className="active" href="#login" onClick={()=>this.tabColorl()}>Login</a></li>
       <li  ><a style={{backgroundColor: bgColorr}} className="active" href="#register" onClick={()=>this.tabColorr()}>Register</a></li>
       </ul>
