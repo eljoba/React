@@ -1,26 +1,41 @@
-var React=require('react');
-//var ReactDOM= require('react-dom');
-import {render} from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
-import {IndexRoute} from 'react-router';
-//import {Router,browserHistory,Route} from 'react-router';
-//import './main.scss';
-//import routes from './routes';
-import {Header} from './components/Header';
-import {Home} from './components/Home';
-import {Root} from './components/Root';
+// React.
+//import {render} from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+// React Router DOM.
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
+// Root.
+import {
+  Root
+} from './components/Root';
 
-class App extends React.Component{
-  render(){
-    return(
-      <BrowserRouter>
-      <Route path={"/"} component={Root}/>
-      
+// Home.
+import {
+  Home
+} from './components/Home';
 
-      </BrowserRouter>
-    );
-  }
-}
+//Header
 
-render(<App/>, window.document.getElementById('app'));
+import {
+  Header
+} from './components/Header';
+
+// Render.
+ReactDOM.render(
+  <Router>
+
+      <Switch>
+
+        <Route path="/" component={Header} exact/>
+        <Route path="/home" component={Home} exact/>
+        
+
+      </Switch>
+
+  </Router>
+, document.querySelector('#app'));
