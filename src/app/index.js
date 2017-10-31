@@ -1,18 +1,26 @@
 var React=require('react');
-var ReactDOM= require('react-dom');
+//var ReactDOM= require('react-dom');
+import {render} from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
+import {IndexRoute} from 'react-router';
+//import {Router,browserHistory,Route} from 'react-router';
 //import './main.scss';
+//import routes from './routes';
+import {Header} from './components/Header';
+import {Home} from './components/Home';
+import {Root} from './components/Root';
 
-import {Header} from "./components/Header";
-import {Home} from "./components/Home";
 
 class App extends React.Component{
   render(){
-    return(<div>
-      <Header/>
-      <Home/>
-      <p>wait now</p>
-      </div>);
-    }
+    return(
+      <BrowserRouter>
+      <Route path={"/"} component={Root}/>
+      
+
+      </BrowserRouter>
+    );
+  }
 }
 
-ReactDOM.render(<App/>, window.document.getElementById('app'));
+render(<App/>, window.document.getElementById('app'));

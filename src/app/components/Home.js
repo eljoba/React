@@ -1,7 +1,8 @@
 import React from "react";
 
 export class Home extends React.Component{
-  render(){
+
+    render(){
     return(
       <div id="test">
       <p>
@@ -9,5 +10,5 @@ export class Home extends React.Component{
       </p>
       </div>
     );
-  }
+}
 }
