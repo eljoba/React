@@ -25,15 +25,21 @@ import {
   Header
 } from './components/Header';
 
+//Login
+
+import {
+  Login
+} from './components/Login';
+
 // Render.
 ReactDOM.render(
   <Router>
 
       <Switch>
 
-        <Route path="/" component={Header} exact/>
-        <Route path="/home" component={Home} exact/>
-        
+        <Route path="/" component={Home} exact/>
+        <Route path="/login" component={Login} exact/>
+
 
       </Switch>
 

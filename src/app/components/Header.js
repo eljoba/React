@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import {Login} from './Login';
+import {Match} from 'react-router-dom';
 //import './tabOnClick.js';
 export class Header extends React.Component{
   constructor(){
@@ -72,13 +79,17 @@ this.setState(
 
     }
     return(
+
+
       <nav>
       <ul>
-      <li ><a style={{backgroundColor: bgColorh}}  className="active" href="#home" onClick={()=>this.tabColorh()}>Home</a></li>
-      <li  ><a style={{backgroundColor: bgColorl}} className="active" href="#login" onClick={()=>this.tabColorl()}>Login</a></li>
-      <li  ><a style={{backgroundColor: bgColorr}} className="active" href="#register" onClick={()=>this.tabColorr()}>Register</a></li>
+      <li ><a style={{backgroundColor: bgColorh}}  className="active" href="/" onClick={()=>this.tabColorh()}>Home</a></li>
+      <li  ><a style={{backgroundColor: bgColorl}} className="active" href="login" onClick={()=>this.tabColorl()}>Login</a></li>
+      <li  ><a style={{backgroundColor: bgColorr}} className="active" href="register" onClick={()=>this.tabColorr()}>Register</a></li>
       </ul>
       </nav>
+
+
     );
   }
 }
