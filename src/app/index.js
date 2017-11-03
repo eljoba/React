@@ -33,15 +33,18 @@ import {
 
 // Render.
 ReactDOM.render(
-  <Router>
 
+  <Router>
+  <div>
+  <Header/>
       <Switch>
 
         <Route path="/" component={Home} exact/>
+        <Route path="/home" component={Home} exact/>
         <Route path="/login" component={Login} exact/>
 
 
       </Switch>
-
+</div>
   </Router>
 , document.querySelector('#app'));
