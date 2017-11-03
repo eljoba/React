@@ -35,7 +35,7 @@ import {
 ReactDOM.render(
 
   <Router>
-  <div>
+  <div id="main">
   <Header/>
       <Switch>
 

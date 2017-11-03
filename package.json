@@ -8,6 +8,9 @@
     "build": "webpack -d && xcopy \"src/index.html\" \"dist/\" /F /Y && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback",
     "build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/\" /F /Y"
   },
+
+  "proxy": "http://localhost:3001",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eljoba/React.git"

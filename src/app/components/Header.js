@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "react-router-dom/Link";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -80,14 +82,15 @@ this.setState(
     }
     return(
 
-
+      <div>
       <nav>
       <ul>
-      <li ><a style={{backgroundColor: bgColorh}}  className="active" href="/" onClick={()=>this.tabColorh()}>Home</a></li>
-      <li  ><a style={{backgroundColor: bgColorl}} className="active" href="login" onClick={()=>this.tabColorl()}>Login</a></li>
-      <li  ><a style={{backgroundColor: bgColorr}} className="active" href="register" onClick={()=>this.tabColorr()}>Register</a></li>
+      <li ><Link style={{backgroundColor: bgColorh,textDecoration: "none"}}  className="active" to="/" onClick={()=>this.tabColorh()}>Home</Link></li>
+      <li  ><Link style={{backgroundColor: bgColorl,textDecoration: "none"}} className="active" to="login" onClick={()=>this.tabColorl()}>Login</Link></li>
+      <li  ><Link style={{backgroundColor: bgColorr,textDecoration: "none", ":hover": {backgroundColor: "red"}}}  className="active" to="register" onClick={()=>this.tabColorr()}>Register</Link></li>
       </ul>
       </nav>
+      </div>
 
 
     );

@@ -9,9 +9,10 @@ export class Login extends React.Component{
    }
    handleSubmit(e) {
      e.preventDefault();
+     //const proxyurl = "https://cors-anywhere.herokuapp.com/";
      var self = this;
      // On submit of the form, send a POST request with the data to the server.
-     fetch('/', {
+     fetch('/login', {
          method: 'POST',
          data: {
            name: self.refs.name,
@@ -41,7 +42,7 @@ export class Login extends React.Component{
         <div >
         <label>
           Password:
-          <input id="upass" type="password" placeholder="Job" ref="job"/>
+          <input id="upass" type="password" placeholder="Jo b" ref="job"/>
         </label>
         </div>
         <input id="sub" type="submit" value="Submit" />
